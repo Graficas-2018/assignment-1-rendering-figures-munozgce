@@ -28,6 +28,22 @@
                 var rhombus = createRhombus(gl);
                 
                 // TO DO: Transform the different figure's positions, and draw them.
+
+                mat4.identity(modelViewMatrix);
+                mat4.translate(modelViewMatrix, modelViewMatrix, [-1, 0.8, -3.5]);
+                draw(gl, square);
+                
+                mat4.identity(modelViewMatrix);
+                mat4.translate(modelViewMatrix, modelViewMatrix, [1, 0.8, -3.5]);
+                draw(gl, triangle);
+
+                mat4.identity(modelViewMatrix);
+                mat4.translate(modelViewMatrix, modelViewMatrix, [-0.75, -0.5, -3.1]);
+                draw(gl, rhombus);
+
+                mat4.identity(modelViewMatrix);
+                mat4.translate(modelViewMatrix, modelViewMatrix, [0.9, -0.5, -3.5]);
+                draw(gl, sphere);
                 
 			}
 	);
